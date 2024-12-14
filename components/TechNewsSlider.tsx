@@ -37,7 +37,7 @@ const TechNewsSlider = () => {
 
   const variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? '100%' : '-100%',
       opacity: 0,
     }),
     center: {
@@ -47,18 +47,23 @@ const TechNewsSlider = () => {
     },
     exit: (direction: number) => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? '100%' : '-100%',
       opacity: 0,
     }),
   }
 
   return (
-    <div className="relative bg-gray-900 p-6 rounded-lg shadow-lg overflow-hidden">
+    <div className="relative bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg overflow-hidden">
       <div className="flex items-center justify-between">
-        <Button onClick={goToPrevious} variant="ghost" size="icon" className="text-white z-10">
-          <ChevronLeft className="h-6 w-6" />
+        <Button 
+          onClick={goToPrevious} 
+          variant="ghost" 
+          size="icon" 
+          className="text-white z-10 p-1 sm:p-2"
+        >
+          <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
         </Button>
-        <div className="flex-1 overflow-hidden">
+        <div className="flex-1 overflow-hidden h-20 sm:h-24">
           <AnimatePresence initial={false} custom={direction}>
             <motion.p
               key={currentIndex}
@@ -71,21 +76,28 @@ const TechNewsSlider = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              className="text-center text-lg px-4 absolute w-full"
+              className="text-center text-sm sm:text-lg px-2 sm:px-4 absolute w-full"
             >
               {newsItems[currentIndex]}
             </motion.p>
           </AnimatePresence>
         </div>
-        <Button onClick={goToNext} variant="ghost" size="icon" className="text-white z-10">
-          <ChevronRight className="h-6 w-6" />
+        <Button 
+          onClick={goToNext} 
+          variant="ghost" 
+          size="icon" 
+          className="text-white z-10 p-1 sm:p-2"
+        >
+          <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
         </Button>
       </div>
-      <div className="mt-4 flex justify-center">
+      <div className="mt-2 sm:mt-4 flex justify-center">
         {newsItems.map((_, index) => (
           <motion.div
             key={index}
-            className={`w-2 h-2 rounded-full mx-1 ${index === currentIndex ? 'bg-purple-500' : 'bg-gray-500'}`}
+            className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mx-0.5 sm:mx-1 ${
+              index === currentIndex ? 'bg-purple-500' : 'bg-gray-500'
+            }`}
             initial={false}
             animate={{ scale: index === currentIndex ? 1.5 : 1 }}
             transition={{ duration: 0.3 }}
