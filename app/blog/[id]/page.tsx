@@ -835,6 +835,162 @@ const allBlogPosts = [
     readTime: "6 min read",
     category: "Biotechnology and Ai in Medicine",
   },
+  {
+    id: 26,
+    title: "The Future of AI in 2024: Top Artificial Intelligence Trends",
+    description: "Discover the transformative trends in artificial intelligence for 2024, including generative AI advancements, ethical AI considerations, and its growing role in industries like healthcare, education, and entertainment.",
+    content: `
+      Artificial intelligence (AI) continues to redefine the boundaries of technology and innovation. As we move into 2024, the field is brimming with groundbreaking trends poised to shape industries and society alike.
+  
+      ## Key AI Trends in 2024
+  
+      ### 1. **Generative AI Expansion**
+      - Tools like ChatGPT and DALL·E have paved the way for broader adoption of generative AI.
+      - New applications in personalized content creation, design, and marketing.
+      - Enhanced video, music, and 3D modeling capabilities.
+  
+      ### 2. **AI Ethics and Regulation**
+      - Focus on transparency and fairness in AI decision-making processes.
+      - Increasing demand for explainable AI (XAI) solutions.
+      - Stricter global regulations to mitigate biases and misuse.
+  
+      ### 3. **AI in Healthcare**
+      - Early diagnosis of diseases using AI-powered imaging and predictive models.
+      - Precision medicine tailored to individual genetic profiles.
+      - Improved operational efficiency in hospitals through AI automation.
+  
+      ### 4. **Edge AI and IoT Integration**
+      - AI embedded in Internet of Things (IoT) devices for real-time decision-making.
+      - Smarter homes, factories, and cities driven by edge computing advancements.
+  
+      ### 5. **AI for Education and Training**
+      - AI tutors providing personalized learning experiences.
+      - Real-time feedback for skill development in virtual learning environments.
+      - Integration of gamified AI solutions to boost engagement.
+  
+      ## Challenges Ahead
+  
+      Despite these advancements, challenges persist:
+      - Ensuring AI systems remain unbiased and secure.
+      - Managing the environmental impact of AI training models.
+      - Preparing the workforce for AI-driven automation.
+  
+      ## The Future is Now
+  
+      As AI technologies evolve, their influence will only grow. Whether through generative content, smarter healthcare systems, or ethical breakthroughs, 2024 promises to be a pivotal year for artificial intelligence.
+    `,
+    image: "/aifuture.jpg",
+    author: "Dr. Emily Tran",
+    date: "2024-01-02",
+    readTime: "6 min read",
+    category: "Artificial Intelligence",
+  },
+  {
+    id: 27,
+    title: "Blockchain Revolution: Beyond Cryptocurrency",
+    description: "Dive into how blockchain is transforming industries beyond cryptocurrency, including supply chain transparency, decentralized finance, and secure digital identities.",
+    content: `
+      Blockchain technology has evolved far beyond its origins in cryptocurrency. Today, its applications span industries, promising transparency, security, and efficiency.
+  
+      ## Beyond Bitcoin: Blockchain’s Expanding Horizons
+  
+      ### 1. **Supply Chain Transparency**
+      - Real-time tracking of goods from origin to destination.
+      - Improved accountability with tamper-proof records.
+      - Examples: Walmart’s food traceability system, IBM’s TradeLens platform.
+  
+      ### 2. **Decentralized Finance (DeFi)**
+      - Enabling peer-to-peer lending, borrowing, and trading without intermediaries.
+      - Lower transaction costs and increased accessibility.
+      - Examples: Ethereum-based DeFi protocols like Uniswap and Aave.
+  
+      ### 3. **Secure Digital Identities**
+      - Blockchain-based IDs ensuring privacy and security.
+      - Empowering individuals in underbanked regions with verified identities.
+      - Examples: Microsoft’s decentralized identity initiative.
+  
+      ### 4. **Smart Contracts**
+      - Self-executing contracts ensuring trust and efficiency.
+      - Applications in real estate, insurance, and legal industries.
+  
+      ### 5. **Blockchain in Gaming**
+      - Non-fungible tokens (NFTs) reshaping in-game economies.
+      - Blockchain-based games offering true ownership of digital assets.
+  
+      ## Challenges and Future Outlook
+  
+      While blockchain offers immense potential, challenges remain:
+      - Scalability issues with high transaction volumes.
+      - Regulatory uncertainties across different regions.
+      - Energy consumption concerns, especially with proof-of-work systems.
+  
+      Blockchain is set to redefine how we approach trust and transparency in the digital age. Its versatility and resilience make it a cornerstone technology for the future.
+    `,
+    image: "/blockchain.jpeg",
+    author: "John Mitchell",
+    date: "2023-12-20",
+    readTime: "7 min read",
+    category: "Blockchain Technology",
+  },
+  {
+    id: 28,
+    title: "Quantum Computing: A New Era of Processing Power",
+    description: "Explore how quantum computing is set to transform industries, solve complex problems, and push the boundaries of computational power to new heights.",
+    content: `
+      Quantum computing stands at the forefront of technological innovation, promising to revolutionize how we process information and solve complex problems. Unlike classical computers that use bits (0s and 1s), quantum computers leverage quantum bits or qubits, which can exist in multiple states simultaneously through a phenomenon called superposition.
+  
+      ## The Power of Quantum Computing
+  
+      Quantum computers harness several key quantum mechanical principles:
+      
+      1. **Superposition**: Qubits can exist in multiple states at once, enabling parallel processing at an unprecedented scale.
+      2. **Entanglement**: Quantum particles can be correlated in ways that classical physics cannot explain, allowing for more complex computations.
+      3. **Quantum Interference**: This phenomenon helps quantum computers arrive at solutions by reinforcing correct paths and canceling incorrect ones.
+  
+      ## Real-World Applications
+  
+      The potential applications of quantum computing are vast and transformative:
+  
+      ### Cryptography and Security
+      - Breaking current encryption methods
+      - Developing quantum-resistant cryptography
+      - Secure communication through quantum key distribution
+  
+      ### Drug Discovery
+      - Simulating molecular interactions
+      - Accelerating drug development processes
+      - Personalized medicine optimization
+  
+      ### Financial Modeling
+      - Portfolio optimization
+      - Risk analysis
+      - High-frequency trading strategies
+  
+      ## Current Challenges
+  
+      Despite the promising potential, several challenges remain:
+  
+      1. Maintaining quantum coherence
+      2. Scaling up qubit systems
+      3. Error correction
+      4. Cost and accessibility
+  
+      ## The Road Ahead
+  
+      As we continue to advance quantum computing technology, we're seeing:
+      - Increased investment from major tech companies
+      - Growing collaboration between academia and industry
+      - Development of quantum-specific programming languages and tools
+      - Emergence of quantum computing startups
+  
+      The quantum computing revolution is not just about raw computational power; it's about transforming how we approach problem-solving across industries. As this technology matures, we can expect to see breakthrough applications that were previously thought impossible.
+    `,
+    image: "/quantumc.jpg",
+    author: "Dr. Sarah Chen",
+    date: "2023-12-13",
+    readTime: "8 min read",
+    category: "Quantum Computing",
+  },
 ]
 
 export default function BlogPost() {
@@ -870,14 +1026,14 @@ export default function BlogPost() {
   }
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white"
     >
       <div className="container mx-auto py-16 px-4">
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -896,24 +1052,24 @@ export default function BlogPost() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Image 
-                  src={post.image} 
-                  alt={post.title} 
-                  width={1200} 
-                  height={600} 
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={1200}
+                  height={600}
                   className="w-full h-[400px] object-cover rounded-t-lg"
                 />
               </motion.div>
             </CardHeader>
             <CardContent className="p-8">
-              <motion.div 
+              <motion.div
                 className="mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <CardTitle className="text-4xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">{post.title}</CardTitle>
-                <motion.div 
+                <motion.div
                   className="flex flex-wrap gap-4 text-sm text-gray-400"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -937,8 +1093,8 @@ export default function BlogPost() {
                   </div>
                 </motion.div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="prose prose-invert max-w-none"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -946,8 +1102,8 @@ export default function BlogPost() {
               >
                 {post.content.split('\n').map((paragraph, index) => {
                   if (paragraph.startsWith('##')) {
-                    return <motion.h2 
-                      key={index} 
+                    return <motion.h2
+                      key={index}
                       className="text-2xl font-bold mt-8 mb-4"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -957,8 +1113,8 @@ export default function BlogPost() {
                     </motion.h2>
                   }
                   if (paragraph.startsWith('###')) {
-                    return <motion.h3 
-                      key={index} 
+                    return <motion.h3
+                      key={index}
                       className="text-xl font-bold mt-6 mb-3"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -968,8 +1124,8 @@ export default function BlogPost() {
                     </motion.h3>
                   }
                   if (paragraph.startsWith('-')) {
-                    return <motion.li 
-                      key={index} 
+                    return <motion.li
+                      key={index}
                       className="ml-4"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -979,8 +1135,8 @@ export default function BlogPost() {
                     </motion.li>
                   }
                   if (paragraph.trim().length > 0) {
-                    return <motion.p 
-                      key={index} 
+                    return <motion.p
+                      key={index}
                       className="mb-4"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -993,7 +1149,7 @@ export default function BlogPost() {
                 })}
               </motion.div>
             </CardContent>
-            <CardFooter className="p-8 flex justify-between items-center border-t border-gray-800">
+            {/* <CardFooter className="p-8 mt-2 flex justify-between items-center border-gray-800">
               <motion.div 
                 className="flex items-center gap-4"
                 initial={{ opacity: 0, x: -20 }}
@@ -1011,7 +1167,27 @@ export default function BlogPost() {
               >
                 Category: {post.category}
               </motion.span>
+            </CardFooter> */}
+            <CardFooter className="p-4 md:p-8 mt-2 flex flex-col md:flex-row justify-between items-center border-gray-800">
+              <motion.div
+                className="flex items-center gap-2 md:gap-4 mb-4 md:mb-0"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <span className="text-sm text-gray-400 text-center md:text-left">Share this article:</span>
+                <SocialIcons />
+              </motion.div>
+              <motion.span
+                className="text-sm text-gray-400 text-center md:text-right"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                Category: {post.category}
+              </motion.span>
             </CardFooter>
+
           </GlowingCard>
 
           <GlowingCard>
@@ -1021,8 +1197,8 @@ export default function BlogPost() {
             <CardContent className="space-y-4">
               <AnimatePresence>
                 {comments.map((comment, index) => (
-                  <motion.div 
-                    key={index} 
+                  <motion.div
+                    key={index}
                     className="p-4 bg-gray-800 rounded-lg"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
