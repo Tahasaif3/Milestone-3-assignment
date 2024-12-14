@@ -12,13 +12,11 @@ const partners = [
   { name: 'AI Dynamics', icon: Shield },
 ]
 
-// Define types for the partner prop
 interface Partner {
   name: string
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>> // Type for React component (icon)
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
 }
 
-// Define types for the component props
 interface PartnerCardProps {
   partner: Partner
   index: number
@@ -26,7 +24,7 @@ interface PartnerCardProps {
 
 const PartnerLogos = () => {
   return (
-    <div className="flex flex-wrap justify-center items-center gap-8">
+    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
       {partners.map((partner, index) => (
         <PartnerCard key={partner.name} partner={partner} index={index} />
       ))}
@@ -42,10 +40,10 @@ const PartnerCard = ({ partner, index }: PartnerCardProps) => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative"
+      className="relative w-full sm:w-auto"
     >
       <motion.div
-        className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-110"
+        className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-110"
         whileHover={{ scale: 1.1 }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
@@ -54,10 +52,11 @@ const PartnerCard = ({ partner, index }: PartnerCardProps) => {
           initial={{ rotate: 0 }}
           animate={{ rotate: isHovered ? 360 : 0 }}
           transition={{ duration: 0.5 }}
+          className="flex justify-center"
         >
-          <partner.icon className="w-16 h-16 text-purple-400 mb-2" />
+          <partner.icon className="w-12 h-12 sm:w-16 sm:h-16 text-purple-400 mb-2" />
         </motion.div>
-        <p className="text-center font-semibold text-white">{partner.name}</p>
+        <p className="text-center font-semibold text-white text-sm sm:text-base">{partner.name}</p>
       </motion.div>
       {isHovered && (
         <motion.div
@@ -65,7 +64,9 @@ const PartnerCard = ({ partner, index }: PartnerCardProps) => {
           animate={{ opacity: 1, scale: 1 }}
           className="absolute inset-0 bg-purple-600 bg-opacity-90 rounded-lg flex items-center justify-center"
         >
-          <p className="text-white text-center px-2">Partnering in cutting-edge {partner.name} technologies</p>
+          <p className="text-white text-center px-2 text-xs sm:text-sm">
+            Partnering in cutting-edge {partner.name} technologies
+          </p>
         </motion.div>
       )}
     </motion.div>
@@ -73,3 +74,4 @@ const PartnerCard = ({ partner, index }: PartnerCardProps) => {
 }
 
 export default PartnerLogos
+
