@@ -54,18 +54,18 @@ const TechNewsSlider = () => {
 
   return (
     <div className="relative bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg overflow-hidden">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-2 sm:gap-4">
         <Button 
           onClick={goToPrevious} 
           variant="ghost" 
           size="icon" 
-          className="text-white z-10 p-1 sm:p-2"
+          className="text-white z-10 shrink-0"
         >
           <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
         </Button>
-        <div className="flex-1 overflow-hidden h-20 sm:h-24">
+        <div className="relative flex-1 min-h-[5rem] sm:min-h-[4rem] flex items-center justify-center">
           <AnimatePresence initial={false} custom={direction}>
-            <motion.p
+            <motion.div
               key={currentIndex}
               custom={direction}
               variants={variants}
@@ -76,17 +76,19 @@ const TechNewsSlider = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              className="text-center text-sm sm:text-lg px-2 sm:px-4 absolute w-full"
+              className="absolute inset-0 flex items-center justify-center"
             >
-              {newsItems[currentIndex]}
-            </motion.p>
+              <p className="text-center text-sm sm:text-lg px-1 sm:px-4 text-white">
+                {newsItems[currentIndex]}
+              </p>
+            </motion.div>
           </AnimatePresence>
         </div>
         <Button 
           onClick={goToNext} 
           variant="ghost" 
           size="icon" 
-          className="text-white z-10 p-1 sm:p-2"
+          className="text-white z-10 shrink-0"
         >
           <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
         </Button>
@@ -109,3 +111,4 @@ const TechNewsSlider = () => {
 }
 
 export default TechNewsSlider
+
