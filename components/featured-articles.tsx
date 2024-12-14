@@ -9,9 +9,9 @@ import { GlowingCard, CardContent, CardDescription, CardFooter, CardHeader, Card
 import SocialIcons from './SocialIcons'
 
 const featuredPosts = [
-  { id: 9, title: 'The Future of AI in 2024: Top Artificial Trends in 2024', image: '/aifuture.jpg' },
-  { id: 10, title: 'Blockchain Revolution: Beyond Cryptocurrency', image: '/blockchain.jpeg' },
-  { id: 11, title: 'Quantum Computing: A New Era of Processing Power', image: '/quantumc.jpg' },
+  { id: 26, title: 'The Future of AI in 2024: Top Artificial Trends in 2024', image: '/aifuture.jpg' },
+  { id: 27, title: 'Blockchain Revolution: Beyond Cryptocurrency', image: '/blockchain.jpeg' },
+  { id: 28, title: 'Quantum Computing: A New Era of Processing Power', image: '/quantumc.jpg' },
 ]
 
 interface Post {
